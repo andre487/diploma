@@ -1,0 +1,63 @@
+<?
+  $page_title = "Решение игры двух лиц с нулевой суммой";
+  require($_SERVER['DOCUMENT_ROOT']."/inc/top.php");
+?>
+
+<script type="text/javascript" src="jscript.js"></script>
+
+<h1>Решение игры двух лиц с нулевой суммой</h1>
+<h2>Постановка задачи</h2>
+<p>
+  В системе имеется два лица, принимающих решение &mdash; <i>A</i> и <i>B</i>, которые имеют <i>m</i> и <i>n</i>
+  чистых стратегий соответственно. Известна платежная матрица <i>H</i>, в которой отражены выигрыши игрока <i>A</i>, которые
+  так же являются &laquo;проигрышами&raquo; игрока <i>B</i>.
+</p>
+<p>
+  Решение задачи заключается в принятии решения о выборе игроками стратегий, гарантирующих равновесную ситуацию.
+</p>
+<p>
+  В случае, если в платежной матрице есть седловая точка, решением является пара чистых стратегий. В случае, если седловой
+  точки нет, необходимо найти смешанные стратегии &mdash; поставить в соответствие каждой стратегии вероятность ее выбора.
+</p>
+
+<div style="height: 1cm;"></div>
+<h2>Ввод данных</h2>
+<div id="input1">
+  <table>
+    <tr>
+      <td>
+        Количество&nbsp;стратегий&nbsp;игрока&nbsp;<i>A</i>,&nbsp;<i>m</i>&nbsp;=
+      </td>
+      <td>
+        <input type="text" id="inp_m" size="2" maxlength="2" value="2" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Количество&nbsp;стратегий&nbsp;игрока&nbsp;<i>B</i>,&nbsp;<i>n</i>&nbsp;=
+      </td>
+      <td>
+        <input type="text" id="inp_n" size="2" maxlength="2" value="3" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div>&nbsp;</div>
+        <input type="button" value="Далее &rarr;" onclick="SetInp2();" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="height: 0.5cm;"></div>
+<a name="input2_anc"></a>
+<div id="input2"></div>
+
+<a name="model_anc"></a>
+<div id="model_div"></div>
+
+<div id="output"></div>
+
+<?
+  require($_SERVER['DOCUMENT_ROOT']."/inc/bot.php");
+?>

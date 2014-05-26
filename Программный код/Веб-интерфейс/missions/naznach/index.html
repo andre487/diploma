@@ -1,0 +1,63 @@
+<?
+  $page_title = "Решение задачи о назначениях";
+  require($_SERVER['DOCUMENT_ROOT']."/inc/top.php");
+?>
+
+<script type="text/javascript" src="jscript.js"></script>
+
+<h1>Задача о назначениях</h1>
+<h2>Постановка задачи</h2>
+<table cellpadding="0" cellspacing="0" style="width: 100%;">
+  <tr>
+    <td style="width: 0%; vertical-align: top;">
+      <img src="./images/naznach.png" alt="Задача о назначениях" />
+    </td>
+    <td style="width: 100%; vertical-align: top; padding-left: 10px;">
+      <p>
+        Имеется <i>n</i> исполнителей работ, которых нужно распределить по <i>n</i> видам работ.
+        При этом известны затраты на выполнение исполнителем <i>i</i> вида работ <i>j</i>:
+        <i>C</i><sub>ij</sub>, <i>i</i>&nbsp;=&nbsp;<span style="text-decoration: overline;">1,<i>n</i></span>,
+        <i>j</i>&nbsp;=&nbsp;<span style="text-decoration: overline;">1,<i>n</i></span>. Необходимо так распределить
+        исполнителей по видам работ, чтобы суммарные затраты были минимальны.
+      </p>
+      <p>
+        Задача о назначениях является частным случаем <a href="/missions/transport/">транспортной задачи</a>
+        и, соответственно, задачи <a href="/missions/linprog/">линейного программирования</a>, ее формулировку
+        можно увидеть слева от данного текста.
+      </p>
+    </td>
+  </tr>
+</table>
+<div style="height: 1cm;"></div>
+<h2>Ввод данных</h2>
+<div id="input1">
+  <table>
+    <tr>
+      <td>
+        Количество&nbsp;видов&nbsp;работ,&nbsp;<i>n</i>&nbsp;=
+      </td>
+      <td>
+        <input type="text" id="inp_n" size="2" maxlength="2" value="3" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div>&nbsp;</div>
+        <input type="button" value="Далее &rarr;" onclick="SetInp2();" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="height: 0.5cm;"></div>
+<a name="input2_anc"></a>
+<div id="input2"></div>
+
+<a name="model_anc"></a>
+<div id="model_div"></div>
+
+<div id="output"></div>
+
+<?
+  require($_SERVER['DOCUMENT_ROOT']."/inc/bot.php");
+?>

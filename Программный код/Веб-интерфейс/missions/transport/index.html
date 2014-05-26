@@ -1,0 +1,78 @@
+<?
+  $page_title = "Решение транспортной задачи";
+  require($_SERVER['DOCUMENT_ROOT']."/inc/top.php");
+?>
+
+<script type="text/javascript" src="jscript.js"></script>
+
+<h1>Транспортная задача в матричной постановке</h1>
+<h2>Постановка задачи</h2>
+<table cellpadding="0" cellspacing="0" style="width: 100%;">
+  <tr>
+    <td style="width: 0%; vertical-align: top;">
+      <img src="./images/transp.jpg" alt="Транспортная задача" />
+    </td>
+    <td style="width: 100%; vertical-align: top; padding-left: 10px;">
+      <p>
+        Имеется <i>m</i> поставщиков однородной продукции: <i>A</i><sub>1</sub>,&nbsp;<i>A</i><sub>2</sub>,&nbsp;...,&nbsp;<i>A</i><sub>m</sub>;
+        и <i>n</i> потребителей этой продукции: <i>B</i><sub>1</sub>,&nbsp;<i>B</i><sub>2</sub>,&nbsp;...,&nbsp;<i>B</i><sub>n</sub>.
+        Так же известны цены перевозки единицы продукции от каждого поставщика каждому потребителю:
+        <i>C</i><sub>ij</sub>, <i>i</i>&nbsp;=&nbsp;<span style="text-decoration: overline;">1,<i>m</i></span>,
+        <i>j</i>&nbsp;=&nbsp;<span style="text-decoration: overline;">1,<i>n</i></span>. Необходимо найти такие объемы перевозок
+        <i>X</i><sub>ij</sub>, <i>i</i>&nbsp;=&nbsp;<span style="text-decoration: overline;">1,<i>m</i></span>,
+        <i>j</i>&nbsp;=&nbsp;<span style="text-decoration: overline;">1,<i>n</i></span>, чтобы их стоимость была минимальна,
+        все потребности были удовлетворены, и вся продукция была вывезена.
+      </p>
+      <p>
+        Различают закрытую и открытую транспортные задачи. В закрытой транспортной задаче количество продукции у поставщиков
+        равно потребностям потребителей. Открытая транспортная задача приводится к закрытой введением фиктивного поставщика
+        или потребителя.
+      </p>
+      <p>
+        Транспортная задача является задачей <a href="/missions/linprog/">линейного программирования</a> специального вида, ее формулировку
+        можно увидеть слева от данного текста.
+      </p>
+    </td>
+  </tr>
+</table>
+<div style="height: 1cm;"></div>
+<h2>Ввод данных</h2>
+<div id="input1">
+  <table>
+    <tr>
+      <td>
+        Количество&nbsp;поставщиков,&nbsp;<i>m</i>&nbsp;=
+      </td>
+      <td>
+        <input type="text" id="inp_m1" size="2" maxlength="2" value="2" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Количество&nbsp;потребителей,&nbsp;<i>n</i>&nbsp;=
+      </td>
+      <td>
+        <input type="text" id="inp_n" size="2" maxlength="2" value="3" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div>&nbsp;</div>
+        <input type="button" value="Далее &rarr;" onclick="SetInp2();" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="height: 0.5cm;"></div>
+<a name="input2_anc"></a>
+<div id="input2"></div>
+
+<a name="model_anc"></a>
+<div id="model_div"></div>
+
+<div id="output"></div>
+
+<?
+  require($_SERVER['DOCUMENT_ROOT']."/inc/bot.php");
+?>

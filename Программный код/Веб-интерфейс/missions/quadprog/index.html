@@ -1,0 +1,110 @@
+<?
+  $page_title = "Решение задачи квадратичного программирования";
+  require("../../inc/top.php");
+?>
+
+<script type="text/javascript" src="quadprog_jscript.js"></script>
+
+<h1>Задача квадратичного программирования (В ПРОЦЕССЕ РАЗРАБОТКИ)</h1>
+<h2>Постановка задачи</h2>
+<table cellpadding="0" cellspacing="0" style="width: 100%;">
+  <tr>
+    <td style="width: 347px; vertical-align: top;">
+      <img src="./images/qp.png" alt="Постановка задачи" width="347" height="172" />
+    </td>
+    <td style="vertical-align: top; padding: 0 10px; font-size: 10pt;">
+      <p>Здесь <i>n</i> &ndash; размерность пространства всех переменных. На переменные <i>x<sup>'</sup></i> наложено
+      ограничение &bdquo;&ge;&nbsp;0&rdquo;, их количество&nbsp;&ndash;&nbsp;<i>n</i><sub>1</sub>. На остальные переменные,
+      <i>x<sup>''</sup></i>, такого ограничения не наложено, их количество &ndash; <i>n</i><sub>2</sub>.
+      <i>n</i><sub>1</sub>&nbsp;+ <i>n</i><sub>2</sub>&nbsp;= <i>n</i>.</p>
+      <p><i>A<sub>i</sub><sup>'</sup>, A<sub>i</sub><sup>''</sup>, b<sub>i</sub></i>&nbsp;&ndash; матрицы коэффициентов
+      и векторы правых частей соответствующих групп ограничений. Матрицы <i>A<sub>i</sub><sup>'</sup></i> соответствуют коэффициентам
+      при переменных, на которых наложено условие неотрицательности, матрицы <i>A<sub>i</sub><sup>''</sup></i>&ndash;
+      всем остальным переменным. Ограничениям-равенствам соответствуют коэффициенты и правые части, которым соответствует
+      <i>i</i> = 1. Их количество&nbsp;&ndash; <i>m</i><sub>1</sub>. Ограничениям-неравенствам типа&nbsp;&le; соответствуют
+      коэффициенты и правые части, которым соответствует <i>i</i>&nbsp;=&nbsp;2. Их количество&nbsp;&ndash; <i>m</i><sub>2</sub>.
+      Ограничениям-неравенствам типа&nbsp;&ge; соответствуют
+      коэффициенты и правые части, которым соответствует <i>i</i>&nbsp;= 3. Их количество&nbsp;&ndash; <i>m</i><sub>3</sub>.</p>
+    </td>
+  </tr>
+</table>
+<div style="height: 1cm;"></div>
+<h2>Ввод данных</h2>
+<div id="input1">
+  <table>
+    <tr>
+      <td>
+        <i>n</i> =
+      </td>
+      <td>
+        <input type="text" id="inp_n" size="2" maxlength="2" value="4" />
+      </td>
+      <td>
+        (размерность пространства переменных).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <i>n</i><sub>2</sub> =
+      </td>
+      <td>
+        <input type="text" id="inp_n2" size="2" maxlength="2" value="0" />
+      </td>
+      <td>
+        (количество переменных, которые могут принимать значения меньше нуля).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <i>m</i><sub>1</sub> =
+      </td>
+      <td>
+        <input type="text" id="inp_m1" size="2" maxlength="2" value="0" />
+      </td>
+      <td>
+        (количество ограничений-равенств).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <i>m</i><sub>2</sub> =
+      </td>
+      <td>
+        <input type="text" id="inp_m2" size="2" maxlength="2" value="3" />
+      </td>
+      <td>
+        (количество ограничений-неравенств &bdquo;&le;&rdquo;).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <i>m</i><sub>3</sub> =
+      </td>
+      <td>
+        <input type="text" id="inp_m3" size="2" maxlength="2" value="0" />
+      </td>
+      <td>
+        (количество ограничений-неравенств &bdquo;&ge;&rdquo;).
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div>&nbsp;</div>
+        <input type="button" value="Далее &rarr;" onclick="SetInp2();" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="height: 0.5cm;"></div>
+<a name="input2_anc"></a>
+<div id="input2"></div>
+
+<a name="model_anc"></a>
+<div id="model_div"></div>
+
+<div id="output"></div>
+
+<?
+  require("../../inc/bot.php");
+?>

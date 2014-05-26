@@ -1,0 +1,73 @@
+<?
+  $page_title = "Решение игры с природой";
+  require($_SERVER['DOCUMENT_ROOT']."/inc/top.php");
+?>
+
+<script type="text/javascript" src="jscript.js"></script>
+
+<h1>Решение игры с природой</h1>
+<h2>Постановка задачи</h2>
+<p>
+  Лицо, принимающее решение, имеет <i>m</i> чистых стратегий. Природа имеет <i>n</i> состояний.
+  Известна матрица выигрышей <i>H</i>.
+</p>
+<p>
+  Решение задачи заключается в принятии решения о выборе стратегии, который делается
+  в соответствии с каким-либо критерием.
+</p>
+
+<div style="height: 1cm;"></div>
+<h2>Ввод данных</h2>
+<div id="input1">
+  <table>
+    <tr>
+      <td>
+        Количество&nbsp;стратегий,&nbsp;<i>m</i>&nbsp;=&nbsp;
+      </td>
+      <td>
+        <input type="text" id="inp_m" size="2" maxlength="2" value="2" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Количество&nbsp;состояний&nbsp;природы,&nbsp;<i>n</i>&nbsp;=&nbsp;
+      </td>
+      <td>
+        <input type="text" id="inp_n" size="2" maxlength="2" value="3" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div>&nbsp;</div>
+        <b>Критерии для принятия решения:</b>
+        <br />
+        <input type='checkbox' id='bayes' />&nbsp;Критерий Байеса;
+        <br />
+        <input type='checkbox' id='vald' />&nbsp;Критерий Вальда;
+        <br />
+        <input type='checkbox' id='maxmax' />&nbsp;Критерий максимакса;
+        <br />
+        <input type='checkbox' id='gurvits' />&nbsp;Критерий оптимизма-пессимизма Гурвица;
+        <br />
+        <input type='checkbox' id='laplas' />&nbsp;Критерий Лапласа;
+        <br />
+        <input type='checkbox' id='sevidzh' />&nbsp;Критерий Сэвиджа.
+        <div>&nbsp;</div>
+        <input type="button" value="Далее &rarr;" onclick="SetInp2();" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="height: 0.5cm;"></div>
+<a name="input2_anc"></a>
+<div id="input2"></div>
+
+<a name="model_anc"></a>
+<div id="model_div"></div>
+
+<div id="output"></div>
+
+<?
+  require($_SERVER['DOCUMENT_ROOT']."/inc/bot.php");
+?>

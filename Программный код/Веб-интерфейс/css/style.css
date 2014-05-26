@@ -1,0 +1,236 @@
+body
+  {
+    font-family: 'Arial';
+    font-size: 10pt;
+    color: black;
+    background: white;
+  }
+
+h1
+  {
+    margin: 0;
+    font-size: 14pt;
+    line-height: 14pt;
+    padding: 0 0 10px 0;
+  }
+
+h2
+  {
+    margin: 0;
+    font-size: 12pt;
+    line-height: 12pt;
+    padding: 0 0 5px 0;
+  }
+
+p
+  {
+    margin: 0 0 10px 0;
+  }
+
+sub, sup
+  {
+    font-size: 8pt;
+  }
+
+a:link, a:visited
+  {
+    color: #003366;
+    text-decoration: underline;
+    outline: none;
+  }
+
+a:hover, a:visited:hover
+  {
+    color: #003366;
+    text-decoration: none;
+    outline: none;
+  }
+
+a:active, a:visited:active
+  {
+    color: red;
+    text-decoration: none;
+    outline: none;
+  }
+
+.nav_position
+  {
+    height: 51px;
+    line-height: 51px;
+    padding: 0 3px;
+    position: relative;
+    margin: 0px;
+    font-size: 10pt;
+  }
+
+.nav_corner_tl
+  {
+    width: 20px;
+    height: 20px;
+    background: url('/diplom/images/gr_ul.gif') no-repeat left top;
+    position: absolute;
+      top: 0;
+      left: 0;
+    z-index: 3;
+  }
+  
+.nav_corner_bl
+  {
+    width: 20px;
+    height: 31px;
+    background: url('/diplom/images/gr_bl.gif')  no-repeat left bottom;
+    position: absolute;
+      bottom: 0;
+      left: 0;
+    z-index: 3;
+  }
+
+.nav_border_top
+  {
+    width: 100%;
+    height: 5px;
+    background: url('/diplom/images/gr_hu.gif')  repeat-x top;
+    position: absolute;
+      top: 0;
+      left: 0;
+    z-index: 1;
+  }
+
+.nav_border_bot
+  {
+    width: 100%;
+    height: 31px;
+    background: url('/diplom/images/gr_hd.gif')  repeat-x bottom;
+    position: absolute;
+      bottom: 0;
+      left: 0;
+    z-index: 2;
+  }
+
+.nav_a
+  {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+      top: 50%;
+      left: 13px;
+    z-index: 4;
+    margin-top: -17px;
+  }
+
+.nav_white_poloska
+  {
+    width: 5px;
+    height: 38px;
+    position: absolute;
+      top: 1px;
+      right: -3px;
+    z-index: 4;
+    background: white;
+  }
+
+#page_content
+  {
+    height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+.page_content_push
+  {
+    height: 10px;
+  }
+
+.page_content_push_bot
+  {
+    height: 10px;
+  }
+
+#cont_corner_tr
+  {
+    width: 20px;
+    height: 20px;
+    background: url('/diplom/images/gr_ur.gif') no-repeat right top;
+    position: absolute;
+      top: 0;
+      right: 0;
+    z-index: 4;
+  }
+
+#cont_corner_br
+  {
+    width: 20px;
+    height: 31px;
+    background: url('/diplom/images/gr_br.gif') no-repeat right bottom;
+    position: absolute;
+      bottom: 0;
+      right: 0;
+    z-index: 3;
+  }
+
+#cont_corner_bl
+  {
+    width: 20px;
+    height: 31px;
+    background: url('/diplom/images/gr_bl.gif') no-repeat left bottom;
+    position: absolute;
+      bottom: 0;
+      left: 0;
+    z-index: 3;
+  }
+
+#cont_border_top
+  {
+    width: 100%;
+    height: 31px;
+    background: url('/diplom/images/gr_hu.gif')  repeat-x top;
+    position: absolute;
+      top: 0;
+      left: 0;
+    z-index: 3;
+  }
+
+#cont_border_right
+  {
+    width: 20px;
+    height: 100%;
+    background: url('/diplom/images/gr_vr.gif')  repeat-y right;
+    position: absolute;
+      top: 0;
+      right: 0;
+    z-index: 2;
+  }
+
+#cont_border_bot
+  {
+    width: 100%;
+    height: 31px;
+    background: url('/diplom/images/gr_hd.gif')  repeat-x bottom;
+    position: absolute;
+      bottom: 0;
+      left: 0;
+    z-index: 2;
+  }
+
+#cont_border_left
+  {
+    width: 20px;
+    height: 100%;
+    background: url('/diplom/images/gr_vl.gif')  repeat-y bottom;
+    position: absolute;
+      top: 0;
+      left: 0;
+    z-index: 2;
+  }
+
+#page_nav
+  {
+    padding: 10px;
+  }
+
+#page_main
+  {
+    padding: 0 10px;
+  }
